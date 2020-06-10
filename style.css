@@ -19,7 +19,7 @@ main {
   height: 100vh;
 }
 
-main .grid {
+main #grid {
   display: -ms-grid;
   display: grid;
   height: 650px;
@@ -30,12 +30,12 @@ main .grid {
       grid-template-rows: repeat(4, 1fr);
 }
 
-main .grid .card {
+main #grid .card {
   border: 1px solid black;
   margin: 5px;
 }
 
-main .grid .card .remove {
+main #grid .card .remove {
   opacity: 0.5;
 }
 

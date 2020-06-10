@@ -1,8 +1,9 @@
 import characters from "./data/characters.js";
 import questions from "./data/questions.js";
 
-const cards = document.querySelectorAll(".card");
 const selected = document.getElementById("questions");
+const board = document.getElementById("grid");
+
 let playersCard = "";
 let computersCard = "";
 
@@ -36,9 +37,18 @@ const startGame = () => {
     generateQuestions();
 }
 
-cards.forEach(card => {
-    card.addEventListener("click", (event) => {
-        playersCard = card.textContent;
-        startGame();
+const setup = () => {
+    characters.forEach(character => {
+        board.innerHTML += `<div class="card">${character.name}</div>`;
     })
-});
+
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        card.addEventListener("click", (event) => {
+            playersCard = card.textContent;
+            startGame();
+        })
+    });
+}
+
+setup();
