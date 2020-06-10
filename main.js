@@ -20,6 +20,7 @@ const filterCards = (selectedQuestion) => {
 selected.addEventListener("change", (event) => {
     const selectedQuestion = selected.value;
     filterCards(selectedQuestion);
+    selected.remove(selected.selectedIndex);
 });
 
 const generateQuestions = () => {
