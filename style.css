@@ -35,7 +35,8 @@ main #grid .card {
   margin: 5px;
 }
 
-main #grid .card .remove {
+main #grid .card.eliminated {
+  background: red;
   opacity: 0.5;
 }
 

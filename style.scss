@@ -22,7 +22,8 @@ main {
             border: 1px solid black;
             margin: 5px;
 
-            .remove {
+            &.eliminated {
+                background:red;
                 opacity: 0.5;
             }
         }

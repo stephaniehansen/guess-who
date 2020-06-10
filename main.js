@@ -7,6 +7,18 @@ const board = document.getElementById("grid");
 let playersCard = "";
 let computersCard = "";
 
+const removeCards = (matchedCharacters) => {
+    const cards = document.querySelectorAll(".card");
+
+    matchedCharacters.forEach(match => {
+        cards.forEach(card => {
+            if(card.textContent === match.name){
+                card.classList.add("eliminated");
+            }
+        })
+    })
+}
+
 const filterCards = (selectedQuestion) => {
     const matchedQuestion = questions.filter(question => {
         return question.id === selectedQuestion;
@@ -15,6 +27,7 @@ const filterCards = (selectedQuestion) => {
     const matchedCharacters = characters.filter(character => {
         return character[matchedQuestion];
     })
+    removeCards(matchedCharacters);
 }
 
 selected.addEventListener("change", (event) => {
