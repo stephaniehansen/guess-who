@@ -7,10 +7,10 @@ const board = document.getElementById("grid");
 let playersCard = "";
 let computersCard = "";
 
-const removeCards = (matchedCharacters) => {
+const removeCards = (filteredCards) => {
     const cards = document.querySelectorAll(".card");
 
-    matchedCharacters.forEach(match => {
+    filteredCards.forEach(match => {
         cards.forEach(card => {
             if(card.textContent === match.name){
                 card.classList.add("eliminated");
@@ -20,14 +20,24 @@ const removeCards = (matchedCharacters) => {
 }
 
 const filterCards = (selectedQuestion) => {
-    const matchedQuestion = questions.filter(question => {
-        return question.id === selectedQuestion;
-    })[0].match;
+    let key = "";
+    let value = "";
 
-    const matchedCharacters = characters.filter(character => {
-        return character[matchedQuestion];
+    questions.forEach(question => {
+        if(question.id === selectedQuestion){
+            key = question.match[0];
+            value = question.match[1];
+        }
     })
-    removeCards(matchedCharacters);
+
+    const filteredCards = characters.filter(character => {
+        if (computersCard[key] === value) {
+            return character[key] !== value;
+        } else if (computersCard[key] !== value) {         
+            return character[key] === value; 
+        }
+    })
+    removeCards(filteredCards);
 }
 
 selected.addEventListener("change", (event) => {
@@ -38,11 +48,11 @@ selected.addEventListener("change", (event) => {
 
 const generateQuestions = () => {
     questions.forEach(option => {
-        document.getElementById("questions").innerHTML += `<option value="${option.id}">${option.question}</option>`;
+        document.getElementById("questions").innerHTML += `<option value="${option.id}">${option.question}</option>`; 
     })
 }
 
-const generateCardSelection = () =>{
+const generateCardSelection = () => { 
     return characters[Math.floor(Math.random()*characters.length)];
 }
 

@@ -1,18 +1,24 @@
 const characters = [
     {
         name: "Alex",
-        male: true,
-        moustache: true
+        gender: "male",
+        hair: "red"
     },
     {
         name: "Alfred",
-        male: true,
-        moustache: true
+        gender: "male",
+        facialHair: "moustache",
+        hair: "blonde"
     },
     {
         name: "Anita",
-        female: true,
-        moustache: false
+        gender: "female",
+        hair: "black"
+    },
+    {
+        name: "Jenny",
+        gender: "female",
+        hair: "blonde"
     }
 ]
 
