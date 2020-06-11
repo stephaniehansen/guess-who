@@ -33,5 +33,13 @@ main {
 aside {
     select {
         width: 180px;
+        margin-bottom: 20px;
+    }
+
+    .computers-questions{
+        span{
+            display: block;
+            margin: 15px 0;
+        }
     }
 }

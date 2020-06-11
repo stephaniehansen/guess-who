@@ -42,5 +42,11 @@ main #grid .card.eliminated {
 
 aside select {
   width: 180px;
+  margin-bottom: 20px;
+}
+
+aside .computers-questions span {
+  display: block;
+  margin: 15px 0;
 }
 /*# sourceMappingURL=style.css.map */

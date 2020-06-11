@@ -3,7 +3,7 @@ import questions from "./data/questions.js";
 
 const selected = document.getElementById("questions");
 const board = document.getElementById("grid");
-
+let toBeAsked = [...questions];
 let playersCard = "";
 let computersCard = "";
 
@@ -40,25 +40,47 @@ const filterCards = (selectedQuestion) => {
     removeCards(filteredCards);
 }
 
-selected.addEventListener("change", (event) => {
-    const selectedQuestion = selected.value;
-    filterCards(selectedQuestion);
-    selected.remove(selected.selectedIndex);
-});
+const computerSelectQuestion = () => {
+    const questionHTML = document.querySelector(".computers-questions .question");
+    const buttons = document.querySelectorAll(".computers-questions button");
+    const random = Math.floor(Math.random()*toBeAsked.length);
+    let selectedQuestion = toBeAsked[random];
+
+    questionHTML.innerHTML = selectedQuestion.question;
+    toBeAsked.splice(random, 1);
+
+    buttons.forEach(button => {
+        button.addEventListener("click", (event) => {
+            selected.disabled = false;
+            playerSelectQuestion();
+        });
+    });
+}
+
+const playerSelectQuestion = () => {
+    selected.addEventListener("change", (event) => {
+        const selectedQuestion = selected.value;
+        filterCards(selectedQuestion);
+        selected.remove(selected.selectedIndex);
+        selected.disabled = true;
+        computerSelectQuestion();
+    });
+}
 
 const generateQuestions = () => {
     questions.forEach(option => {
-        document.getElementById("questions").innerHTML += `<option value="${option.id}">${option.question}</option>`; 
+        document.getElementById("questions").innerHTML += `<option value="${option.id}">${option.question}</option>`;
     })
 }
 
-const generateCardSelection = () => { 
+const generateCardSelection = () => {
     return characters[Math.floor(Math.random()*characters.length)];
 }
 
 const startGame = () => {
     computersCard = generateCardSelection();
     generateQuestions();
+    playerSelectQuestion();
 }
 
 const setup = () => {
