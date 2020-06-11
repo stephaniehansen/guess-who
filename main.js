@@ -86,14 +86,18 @@ const setup = () => {
     characters.forEach(character => {
         board.innerHTML += `<div class="card">${character.name}</div>`;
     })
+    selected.disabled = true;
 }
 
 document.addEventListener("click", (event) => {
     if(event.target.matches(".card")) {
         event.preventDefault();
+        selected.disabled = false;
         playersCard = characters.filter(character => {
             return event.target.textContent === character.name})[0];
         computersCard = drawComputersCard();
+        console.log("Player chose: " + playersCard.name);
+        console.log("Computer chose: " + computersCard.name);
         populateQuestions();
     }
 }, {once:true});

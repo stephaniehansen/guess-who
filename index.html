@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="./main.js" type="module" async defer></script>
     <title>Guess Who</title>
@@ -13,8 +14,9 @@
     <section id="grid"></section>
 
     <aside>
+        <img src="./images/logo.png">
         <div class="player">
-            Select question to ask:
+            <span>Select question to ask:</span>
             <form>
                 <select id="questions">
                     <option selected>Select...</option>
@@ -23,11 +25,13 @@
         </div>
 
         <div class="computer">
-            Computer is asking:
-            <span class="question">Waiting...</span>
+            <span>Computer is asking:</span>
+            <p class="question">Waiting...</p>
             <button class="btn" value="true">Yes</button>
             <button class="btn" value="false">No</button>
         </div>
+
+        <!-- <button>Restart</button> -->
     </aside>
 </main>
 </body>
