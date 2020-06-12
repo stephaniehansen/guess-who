@@ -53,6 +53,7 @@ main #grid .card {
   position: relative;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 main #grid .card img {
@@ -63,7 +64,10 @@ main #grid .card img {
 }
 
 main #grid .card.eliminated {
-  opacity: 0.5;
+  opacity: 0.3;
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+  pointer-events: none;
 }
 
 main #grid .card:hover {
@@ -77,6 +81,10 @@ aside {
 aside img {
   height: 100px;
   margin-bottom: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
 aside span {
@@ -98,6 +106,15 @@ aside button {
   width: 60px;
   height: 30px;
   margin: 8px 8px 0 0;
+}
+
+aside .selected-card {
+  height: 200px;
+  margin: 15px 10px 40px 10px;
+}
+
+aside .selected-card img {
+  height: 100%;
 }
 
 aside .computer p {

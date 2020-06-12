@@ -41,7 +41,7 @@ main {
             position: relative;
             background-size: cover;
             background-position: center;
-
+            
             img {
                 height: 100%;
                 width: 100%;
@@ -49,7 +49,9 @@ main {
             }
 
             &.eliminated {
-                opacity: 0.5;
+                opacity: 0.3;
+                filter: grayscale(50%);
+                pointer-events: none;
             }
 
             &:hover{
@@ -64,7 +66,8 @@ aside {
 
     img{
         height: 100px;
-        margin-bottom: 15px;
+        display: block;
+        margin: 0 auto;
     }
 
     span {
@@ -88,6 +91,16 @@ aside {
         margin: 8px 8px 0 0;
     }
 
+    .selected-card{
+        height: 200px;
+        width: 200px;
+    }
+
+        img{
+            height: 100%;
+            margin: 0;
+        }
+    }
     .computer{
         p{
             display: block;

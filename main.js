@@ -5,6 +5,7 @@ const selected = document.getElementById("questions");
 const board = document.getElementById("grid");
 const questionHTML = document.querySelector(".computer .question");
 const buttons = document.querySelectorAll(".computer .btn");
+const displayCard = document.querySelector(".selected-card");
 
 let toBeAsked = [...questions];
 let computersBoard = [...characters];
@@ -100,6 +101,7 @@ document.addEventListener("click", (event) => {
         playersCard = characters.filter(character => {
             return event.target.textContent === character.name})[0];
         computersCard = drawComputersCard();
+        displayCard.innerHTML += `<img src="${playersCard.image}">`;
         console.log("Player chose: " + playersCard.name);
         console.log("Computer chose: " + computersCard.name);
         populateQuestions();
