@@ -21,7 +21,7 @@ const endGame = () => {
     if(playersBoard.length ===1){
         alert(`Game Over. You won! You correctly guessed their card ${computersCard.name}. Your opponent has ${computersBoard.length} remaining cards on their board. `);
     } else {
-        alert(`Game Over. You lost, better luck next time! Your opponent's card was ${computersCard.name}.`);
+        alert(`Game Over. You lost, better luck next time! Your opponent correctly guessed your card, ${playersCard.name}. Your opponent's card was ${computersCard.name}.`);
     }
 }
 
