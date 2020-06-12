@@ -40,39 +40,34 @@ const questions = [
         match: ["hair", "black"]
     },
     {
-        id: "07",
-        question: "Is your character's mouth open?",
-        match: ["mouth", "open"]
-    },
-    {
-        id: "08",
+        id: "09",
         question: "Does your character have freckles?",
         match: ["feature", "freckles"]
     },
     {
-        id: "09",
+        id: "10",
         question: "Does your character have rosy cheeks?",
         match: ["feature", "rosyCheeks"]
     },
     {
-        id: "10",
+        id: "11",
         question: "Does your character have a scar?",
         match: ["feature", "scar"]
     },
     {
-        id: "11",
+        id: "12",
         question: "Does your character have a beard?",
         match: ["facialHair", "beard"]
     },
     {
-        id: "12",
+        id: "13",
         question: "Does your character have a moustache?",
         match: ["facialHair", "moustache"]
     },
     {
-        id: "13",
+        id: "14",
         question: "Is your character wearing glasses?",
-        match: ["eyewear", "red"]
+        match: ["eyewear", "glasses"]
     }
 ]
 

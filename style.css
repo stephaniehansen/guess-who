@@ -73,29 +73,17 @@ main #grid .card:hover {
   border: 3px solid #fff;
 }
 
+main #grid .card span {
+  position: absolute;
+  background-color: #6a4d9a;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
 aside {
   margin: 0 20px;
-}
-
-aside span {
-  font-size: 18px;
-}
-
-aside select {
-  width: 190px;
-  margin: 15px 0;
-  height: 40px;
-}
-
-aside select:enabled {
-  border: 5px solid #FFC107;
-  border-radius: 1px;
-}
-
-aside button {
-  width: 60px;
-  height: 30px;
-  margin: 8px 8px 0 0;
+  height: 650px;
 }
 
 aside #logo img {
@@ -104,13 +92,34 @@ aside #logo img {
   margin: 0 auto;
 }
 
-aside .selected-card {
+aside .content span {
+  font-size: 18px;
+}
+
+aside .content select {
+  width: 190px;
+  margin: 15px 0;
+  height: 40px;
+}
+
+aside .content select:enabled {
+  border: 5px solid #FFC107;
+  border-radius: 1px;
+}
+
+aside .content button {
+  width: 60px;
+  height: 30px;
+  margin: 8px 8px 0 0;
+}
+
+aside .content .selected-card {
   height: 200px;
   width: 200px;
   margin: 30px 0;
 }
 
-aside .selected-card img {
+aside .content .selected-card img {
   height: 100%;
   margin: 0;
   -webkit-animation: fadeIn .2s;
@@ -135,13 +144,54 @@ aside .selected-card img {
   }
 }
 
-aside .computer {
+aside .content .computer {
   width: 220px;
 }
 
-aside .computer p {
+aside .content .computer p {
   display: block;
   margin: 10px 0;
   height: 40px;
+}
+
+@media all and (max-width: 699px) {
+  main #grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    height: auto;
+  }
+}
+
+@media all and (max-width: 559px) {
+  main {
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main #grid {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 85vw;
+    margin-bottom: 40px;
+  }
+  main aside {
+    height: auto;
+    margin: 40px 0 20px 0;
+  }
+  main aside .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 40px;
+  }
+  main aside .content .selected-card {
+    margin: 30px;
+  }
+  main aside .content .selected-card img {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

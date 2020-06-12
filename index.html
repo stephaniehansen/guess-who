@@ -15,21 +15,26 @@
 
     <aside>
         <div id="logo"><img src="./images/logo.png"></div>
-        <div class="player">
-            <div class="selected-card"></div>
-            <span>Select question to ask:</span>
-            <form>
-                <select id="questions">
-                    <option selected>Select...</option>
-                </select>
-            </form>
-        </div>
 
-        <div class="computer">
-            <span>Computer is asking:</span>
-            <p class="question">Waiting...</p>
-            <button class="btn" value="true">Yes</button>
-            <button class="btn" value="false">No</button>
+        <div class="content">
+            <div class="selected-card"></div>
+
+            <div class="question-area">
+                <div class="player">
+                    <span>Select question to ask:</span>
+                    <form>
+                        <select id="questions">
+                            <option selected>Select...</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="computer">
+                    <span>Computer is asking:</span>
+                    <p class="question">Waiting...</p>
+                    <button class="btn" value="true">Yes</button>
+                    <button class="btn" value="false">No</button>
+                </div>
+            </div>
         </div>
     </aside>
 </main>

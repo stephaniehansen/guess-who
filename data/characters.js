@@ -3,7 +3,6 @@ const characters = [
         name: "Alex",
         head: "bald",
         hair: "white",
-        mouth: "open",
         feature: "freckles",
         facialHair: "beard",
         image: "./images/alex.jpg"
@@ -20,7 +19,6 @@ const characters = [
         name: "Barb",
         gender: "female",
         hair: "blonde",
-        mouth: "open",
         feature: "freckles",
         image: "./images/barb.jpg"
     },
@@ -34,13 +32,13 @@ const characters = [
     {
         name: "David",
         hair: "white",
-        mouth: "open",
         feature: "scar",
         image: "./images/david.jpg"
     },
     {
         name: "Frans",
         hair: "brown",
+        head: "hat",
         facialHair: "moustache",
         eyewear: "glasses",
         image: "./images/frans.jpg"
@@ -49,7 +47,6 @@ const characters = [
         name: "Herman",
         hair: "blonde",
         head: "hat",
-        mouth: "open",
         feature: "freckles",
         image: "./images/herman.jpg"
     },
@@ -66,7 +63,6 @@ const characters = [
         hair: "white",
         hairStyle: "curly",
         hairLength: "long",
-        mouth: "open",
         feature: "scar",
         image: "./images/paula.jpg"
     },
@@ -83,7 +79,6 @@ const characters = [
         hair: "blonde",
         hairLength: "long",
         head: "hat",
-        mouth: "open",
         feature: "freckles",
         facialHair: "moustache",
         image: "./images/robert.jpg"

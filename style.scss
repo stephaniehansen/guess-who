@@ -57,35 +57,21 @@ main {
             &:hover{
                 border: 3px solid #fff;
             }
+
+            span {
+                position: absolute;
+                background-color: #6a4d9a;;
+                width: 100%;
+                top: 0;
+                right: 0;
+            }
         }
     }
 }
 
 aside {
     margin: 0 20px;
-
-
-
-    span {
-        font-size: 18px;
-    }
-
-    select {
-        width: 190px;
-        margin: 15px 0;
-        height: 40px;
-
-        &:enabled{
-            border: 5px solid #FFC107;
-            border-radius: 1px;
-        }
-    }
-
-    button{
-        width: 60px;
-        height: 30px;
-        margin: 8px 8px 0 0;
-    }
+    height: 650px;
 
     #logo{
         img{
@@ -95,36 +81,96 @@ aside {
         }
     }
 
-    .selected-card{
-        height: 200px;
-        width: 200px;
-        margin: 30px 0;
-    
-
-        img{
-            height: 100%;
-            margin: 0;
-            animation: fadeIn .2s;
-        }
-        @keyframes fadeIn{
-            from{
-                opacity: 0;
-            }
-            to{
-                opacity: 1;
-            }
+    .content {
+        span {
+            font-size: 18px;
         }
 
-    }
-    .computer{
-        width: 220px;
-
-        p{
-            display: block;
-            margin: 10px 0;
+        select {
+            width: 190px;
+            margin: 15px 0;
             height: 40px;
+
+            &:enabled{
+                border: 5px solid #FFC107;
+                border-radius: 1px;
+            }
+        }
+
+        button{
+            width: 60px;
+            height: 30px;
+            margin: 8px 8px 0 0;
+        }
+
+        .selected-card{
+            height: 200px;
+            width: 200px;
+            margin: 30px 0;
+        
+
+            img{
+                height: 100%;
+                margin: 0;
+                animation: fadeIn .2s;
+            }
+            @keyframes fadeIn{
+                from{
+                    opacity: 0;
+                }
+                to{
+                    opacity: 1;
+                }
+            }
+
+        }
+        .computer{
+            width: 220px;
+
+            p{
+                display: block;
+                margin: 10px 0;
+                height: 40px;
+            }
         }
     }
-        
 }
 
+@media all and (max-width: 699px){
+    main{
+        #grid {
+            grid-template-columns: repeat(2, 1fr);
+            height: auto;
+        }
+    }
+}
+
+@media all and (max-width: 559px){
+    main {
+    height: 100%;
+    flex-direction: column;
+
+        #grid{
+            order: 2;
+            width: 85vw;
+            margin-bottom: 40px;
+        }
+
+        aside {
+            height: auto;
+            margin: 40px 0 20px 0;
+
+            .content{
+                display: flex;
+                margin-top: 40px;
+
+                .selected-card{
+                    margin: 30px;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
