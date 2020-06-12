@@ -62,13 +62,9 @@ main {
 }
 
 aside {
-    margin: 0 40px;
+    margin: 0 20px;
 
-    img{
-        height: 100px;
-        display: block;
-        margin: 0 auto;
-    }
+
 
     span {
         font-size: 18px;
@@ -91,21 +87,44 @@ aside {
         margin: 8px 8px 0 0;
     }
 
+    #logo{
+        img{
+            height: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
     .selected-card{
         height: 200px;
         width: 200px;
-    }
+        margin: 30px 0;
+    
 
         img{
             height: 100%;
             margin: 0;
+            animation: fadeIn .2s;
         }
+        @keyframes fadeIn{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+
     }
     .computer{
+        width: 220px;
+
         p{
             display: block;
             margin: 10px 0;
+            height: 40px;
         }
     }
+        
 }
 

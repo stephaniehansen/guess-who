@@ -10,9 +10,10 @@ const characters = [
     },
     {
         name: "Anita",
+        gender: "female",
         hair: "brown",
         hairStyle: "curly",
-        eyeWear: "glasses",
+        eyewear: "glasses",
         image: "./images/anita.jpg"
     },
     {
@@ -27,7 +28,7 @@ const characters = [
         name: "Charles",
         hair: "black",
         feature: "rosyCheeks",
-        eyeWear: "glasses",
+        eyewear: "glasses",
         image: "./images/charles.jpg"
     },
     {
@@ -41,7 +42,7 @@ const characters = [
         name: "Frans",
         hair: "brown",
         facialHair: "moustache",
-        eyeWear: "glasses",
+        eyewear: "glasses",
         image: "./images/frans.jpg"
     },
     {
@@ -74,7 +75,7 @@ const characters = [
         hair: "brown",
         head: "hat",
         facialHair: "beard",
-        eyeWear: "glasses",
+        eyewear: "glasses",
         image: "./images/phillip.jpg"
     },
     {

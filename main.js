@@ -69,6 +69,7 @@ const computersTurn = () => {
             event.preventDefault();
             selected.disabled = false;
             computersBoard = updateBoard(false, generated.id, playersCard, computersBoard);
+            questionHTML.innerHTML = "Waiting...";
 
             if(endCondition()) {
                 endGame();
