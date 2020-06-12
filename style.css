@@ -32,13 +32,14 @@ main #grid {
   display: -ms-grid;
   display: grid;
   height: 650px;
-  width: 800px;
-  -ms-grid-columns: (1fr)[6];
-      grid-template-columns: repeat(6, 1fr);
+  width: 850px;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: (1fr)[4];
       grid-template-rows: repeat(4, 1fr);
   background: #8672a9;
-  padding: 30px;
+  padding: 24px;
+  grid-gap: 10px;
 }
 
 main #grid .card {
@@ -47,15 +48,26 @@ main #grid .card {
   font-size: 18px;
   text-transform: uppercase;
   text-align: center;
+  height: 185px;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+main #grid .card img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main #grid .card.eliminated {
-  background: red;
   opacity: 0.5;
 }
 
 main #grid .card:hover {
-  border: 2px solid white;
+  border: 3px solid #fff;
 }
 
 aside {
@@ -72,9 +84,14 @@ aside span {
 }
 
 aside select {
-  width: 180px;
+  width: 190px;
   margin: 15px 0;
   height: 40px;
+}
+
+aside select:enabled {
+  border: 5px solid #FFC107;
+  border-radius: 1px;
 }
 
 aside button {

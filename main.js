@@ -16,8 +16,12 @@ const endCondition = () => {
     return playersBoard.length === 1 || computersBoard.length === 1;
 }
 
-const endGame = () => {    
-    alert(`Game Over. Player has ${playersBoard.length} remaining cards and Computer has ${computersBoard.length}`);
+const endGame = () => {
+    if(playersBoard.length ===1){
+        alert(`Game Over. You won! You correctly guessed their card ${computersCard.name}. Your opponent has ${computersBoard.length} remaining cards on their board. `);
+    } else {
+        alert(`Game Over. You lost, better luck next time! Your opponent's card was ${computersCard.name}.`);
+    }
 }
 
 const eliminate = (character) => {
@@ -84,7 +88,7 @@ const drawComputersCard = () => {
 
 const setup = () => {
     characters.forEach(character => {
-        board.innerHTML += `<div class="card">${character.name}</div>`;
+        board.innerHTML += `<div class="card" style="background-image: url(${character.image})"><span>${character.name}</span></div>`;
     })
     selected.disabled = true;
 }
