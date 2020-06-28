@@ -103,8 +103,6 @@ document.addEventListener("click", (event) => {
             return event.target.textContent === character.name})[0];
         computersCard = drawComputersCard();
         displayCard.innerHTML += `<img src="${playersCard.image}">`;
-        console.log("Player chose: " + playersCard.name);
-        console.log("Computer chose: " + computersCard.name);
         populateQuestions();
     }
 }, {once:true});
